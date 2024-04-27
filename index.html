@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Colorful Blog</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .article {
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: #fff;
+    }
+    .article h2 {
+      color: #007bff;  /* Blue heading */
+    }
+    .article p {
+      color: #333;
+    }
+    button {
+      background-color: #28a745;  /* Green button */
+      color: #fff;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Colorful Blog</h1>
+  <article class="article">
+    <h2>Blog Post Title</h2>
+    <p>This is the main content of your blog post. You can add paragraphs, images, videos, and other elements here to create informative and engaging content. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <p>Here's another paragraph with some additional information. You can break your content into multiple paragraphs for better readability.</p>
+    <button onclick="changeColor()">Change Background Color</button>
+  </article>
+  
+  <script>
+  function changeColor() {
+    const article = document.querySelector('.article');
+    const colors = ['#f0f8ff', '#faf0e6', '#e6ffe6'];  /* Array of pre-defined colors */
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    const randomColor = colors[randomIndex];
+    article.style.backgroundColor = randomColor;
+  }
+  </script>
+</body>
+</html>
